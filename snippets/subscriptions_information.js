@@ -1,7 +1,15 @@
 function get_subscriptions(user_page) {
-    subscriptions = user_page.querySelector("#profile_idols").querySelectorAll(".line_cell")
-    subs = []
+    subscriptions = user_page.querySelector("#profile_idols")
+    if(!subscriptions) {
+        return
+    }
     
+    subscriptions = subscriptions[0].querySelectorAll(".line_cell")
+    if(!subscriptions) {
+        return
+    }
+
+    subs = []
     for(idx = 0; idx < subscriptions.length; ++idx) {
         subscription = subscriptions[idx]
         

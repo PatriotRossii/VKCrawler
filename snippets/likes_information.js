@@ -1,7 +1,10 @@
 function get_likes(page) {
     likes = page.querySelectorAll(".like_tt_wrap")
-    info = []
+    if(!likes) {
+        return
+    }
 
+    info = []
     for(idx = 0; idx < likes.length; ++idx) {
         element = likes[idx]
     

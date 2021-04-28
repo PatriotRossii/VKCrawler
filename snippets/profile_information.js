@@ -1,6 +1,5 @@
 function get_user_profile(user_page) {
     information = user_page.querySelectorAll(".profile_info_row")
-
     if(!information) {
         return
     }

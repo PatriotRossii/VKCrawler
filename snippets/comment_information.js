@@ -1,7 +1,10 @@
 function get_comments(user_page) {
     replies = user_page.querySelectorAll(".reply")
-    comments = []
+    if(!replies) {
+        return
+    }
 
+    comments = []
     for(idx = 0; idx < replies.length; ++idx) {
         element = replies[idx]
     

@@ -1,7 +1,10 @@
 function get_reposts(page) {
     posts = page.querySelectorAll(".copy_author")
-    info = []
+    if(!posts) {
+        return
+    }
 
+    info = []
     for(index = 0; index < posts.length; ++index) {
         post = posts[index]
     
